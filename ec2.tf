@@ -1,7 +1,10 @@
+variable "name" {}
+
+variable "env" {}
+
 provider "aws" {
-  region     = "us-west-2"
-  access_key = "AKIAY7UO4T4X7RQ44WDO"
-  secret_key = "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"
+  profile = "default"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "ec2example" {
