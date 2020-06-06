@@ -3,8 +3,9 @@ variable "name" {}
 variable "env" {}
 
 provider "aws" {
-  profile = "default"
-  region = "us-east-1"
+  region     = "us-west-2"
+  access_key = "${var.Access_key_ID}"
+  secret_key = "${var.Secret_access_key}"
 }
 
 resource "aws_instance" "ec2example" {
