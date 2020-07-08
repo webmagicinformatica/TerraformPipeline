@@ -7,8 +7,6 @@ agent any
   choice choices: ['plan', 'apply'], description: '', name: 'action'
 }
 
-
-  git 'https://github.com/webmagicinformatica/TerraformPipeline.git'
   if(action == 'plan') {
     stage('init') {
         sh """
