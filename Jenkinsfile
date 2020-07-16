@@ -1,12 +1,12 @@
-pipeline {
-
-agent any
+node {
 
   parameters {
   choice choices: ['prod', 'dev'], description: '', name: 'env'
   choice choices: ['plan', 'apply'], description: '', name: 'action'
 }
 
+
+  git 'https://github.com/webmagicinformatica/TerraformPipeline.git'
   if(action == 'plan') {
     stage('init') {
         sh """
