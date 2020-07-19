@@ -8,7 +8,7 @@ provider "aws" {
 
 resource "aws_instance" "ec2example" {
   ami = "ami-00eb20669e0990cb4"
-  instance_type = "${var.instancetpye}"
+  instance_type = "${var.instancetype}"
 
   tags = {
       Name = "${var.name}"
