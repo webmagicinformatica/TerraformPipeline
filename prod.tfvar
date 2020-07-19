@@ -1,1 +1,2 @@
 name              = "prod"
+instancetype      = "t3.micro"
