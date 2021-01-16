@@ -1,5 +1,5 @@
-node {
-
+pipeline {
+  agent any
   parameters {
   choice choices: ['prod', 'dev'], description: '', name: 'env'
   choice choices: ['plan', 'apply'], description: '', name: 'action'
